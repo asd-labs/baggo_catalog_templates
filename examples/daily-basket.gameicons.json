@@ -1,0 +1,1183 @@
+{
+  "$schema": "../schema/catalog.schema.json",
+  "schema_version": 2,
+  "id": "io.github.asd-labs.daily-basket.gameicons",
+  "name": {
+    "en": "Daily Basket (Game Icons)",
+    "fr": "Panier du jour (Game Icons)",
+    "ar": "سلة اليوم (Game Icons)"
+  },
+  "description": {
+    "en": "An everyday grocery catalog drawn as hand-inked silhouettes — 85 items across eleven aisles. Item artwork from game-icons.net by Lorc, Delapouite and other contributors, licensed CC BY 3.0; see game-icons.net for per-icon authorship. Catalog data itself is CC0-1.0.",
+    "fr": "Un catalogue de courses du quotidien dessiné en silhouettes à l'encre — 85 articles répartis en onze rayons. Illustrations de game-icons.net par Lorc, Delapouite et d'autres contributeurs, licence CC BY 3.0 ; voir game-icons.net pour l'auteur de chaque icône. Les données du catalogue sont en CC0-1.0.",
+    "ar": "كتالوج مشتريات يومية مرسوم بصور ظلّية بالحبر — 85 صنفًا في أحد عشر رفًا. الرسوم من game-icons.net بريشة Lorc وDelapouite ومساهمين آخرين، برخصة CC BY 3.0؛ راجع game-icons.net لمعرفة صاحب كل أيقونة. بيانات الكتالوج نفسها بترخيص CC0-1.0."
+  },
+  "homepage": "https://github.com/asd-labs/baggo_catalog",
+  "author": "Abdessamad",
+  "license": "CC0-1.0",
+  "version": 2,
+  "default_locale": "en",
+  "expires": 30,
+  "icon": "https://api.iconify.design/game-icons/shopping-bag.svg",
+  "shortcuts": {
+    "missing": "https://api.iconify.design/game-icons/shopping-cart.svg",
+    "favorites": "https://api.iconify.design/game-icons/hearts.svg",
+    "recent": "https://api.iconify.design/game-icons/backward-time.svg"
+  },
+  "pins": [
+    { "slug": "groceries", "image": "https://api.iconify.design/game-icons/shopping-bag.svg" },
+    { "slug": "home", "image": "https://api.iconify.design/game-icons/house.svg" },
+    { "slug": "fresh", "image": "https://api.iconify.design/game-icons/fruit-bowl.svg" },
+    { "slug": "party", "image": "https://api.iconify.design/game-icons/cake-slice.svg" },
+    { "slug": "delivery", "image": "https://api.iconify.design/game-icons/wooden-crate.svg" },
+    { "slug": "treats", "image": "https://api.iconify.design/game-icons/cookie.svg" }
+  ],
+  "categories": [
+    {
+      "slug": "fruits",
+      "icon": "https://api.iconify.design/game-icons/shiny-apple.svg",
+      "name": {
+        "en": "Fruits",
+        "fr": "Fruits",
+        "ar": "فواكه"
+      }
+    },
+    {
+      "slug": "vegetables",
+      "icon": "https://api.iconify.design/game-icons/carrot.svg",
+      "name": {
+        "en": "Vegetables",
+        "fr": "Légumes",
+        "ar": "خضار"
+      }
+    },
+    {
+      "slug": "herbs-spices",
+      "icon": "https://api.iconify.design/game-icons/chili-pepper.svg",
+      "name": {
+        "en": "Herbs & Spices",
+        "fr": "Herbes et épices",
+        "ar": "أعشاب وتوابل"
+      }
+    },
+    {
+      "slug": "meat-fish",
+      "icon": "https://api.iconify.design/game-icons/meat.svg",
+      "name": {
+        "en": "Meat & Fish",
+        "fr": "Viande et poisson",
+        "ar": "لحوم وأسماك"
+      }
+    },
+    {
+      "slug": "dairy",
+      "icon": "https://api.iconify.design/game-icons/milk-carton.svg",
+      "name": {
+        "en": "Dairy",
+        "fr": "Produits laitiers",
+        "ar": "ألبان"
+      }
+    },
+    {
+      "slug": "bakery",
+      "icon": "https://api.iconify.design/game-icons/bread.svg",
+      "name": {
+        "en": "Bakery",
+        "fr": "Boulangerie",
+        "ar": "مخبوزات"
+      }
+    },
+    {
+      "slug": "pantry",
+      "icon": "https://api.iconify.design/game-icons/wheat.svg",
+      "name": {
+        "en": "Pantry",
+        "fr": "Épicerie de base",
+        "ar": "مؤن أساسية"
+      }
+    },
+    {
+      "slug": "frozen",
+      "icon": "https://api.iconify.design/game-icons/snowflake-2.svg",
+      "name": {
+        "en": "Frozen",
+        "fr": "Surgelés",
+        "ar": "مجمدات"
+      }
+    },
+    {
+      "slug": "snacks-sweets",
+      "icon": "https://api.iconify.design/game-icons/chocolate-bar.svg",
+      "name": {
+        "en": "Snacks & Sweets",
+        "fr": "Snacks et confiseries",
+        "ar": "وجبات خفيفة وحلويات"
+      }
+    },
+    {
+      "slug": "drinks",
+      "icon": "https://api.iconify.design/game-icons/soda-can.svg",
+      "name": {
+        "en": "Drinks",
+        "fr": "Boissons",
+        "ar": "مشروبات"
+      }
+    },
+    {
+      "slug": "household",
+      "icon": "https://api.iconify.design/game-icons/soap.svg",
+      "name": {
+        "en": "Household",
+        "fr": "Entretien",
+        "ar": "مستلزمات المنزل"
+      }
+    }
+  ],
+  "items": [
+    {
+      "slug": "apples",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Apples",
+        "fr": "Pommes",
+        "ar": "تفاح"
+      },
+      "image": "https://api.iconify.design/game-icons/shiny-apple.svg"
+    },
+    {
+      "slug": "pears",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Pears",
+        "fr": "Poires",
+        "ar": "كمثرى"
+      },
+      "image": "https://api.iconify.design/game-icons/pear.svg"
+    },
+    {
+      "slug": "bananas",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Bananas",
+        "fr": "Bananes",
+        "ar": "موز"
+      },
+      "note": {
+        "en": "Bananas ripen the fruit around them — store them on their own.",
+        "fr": "Les bananes font mûrir les fruits voisins : rangez-les à part.",
+        "ar": "الموز يسرّع نضج الفواكه المجاورة، لذا احفظه بمفرده."
+      },
+      "image": "https://api.iconify.design/game-icons/banana-bunch.svg"
+    },
+    {
+      "slug": "oranges",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Oranges",
+        "fr": "Oranges",
+        "ar": "برتقال"
+      },
+      "image": "https://api.iconify.design/game-icons/orange.svg"
+    },
+    {
+      "slug": "lemons",
+      "category": "fruits",
+      "unit": "pcs",
+      "name": {
+        "en": "Lemons",
+        "fr": "Citrons",
+        "ar": "ليمون"
+      },
+      "image": "https://api.iconify.design/game-icons/lemon.svg"
+    },
+    {
+      "slug": "grapes",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Grapes",
+        "fr": "Raisins",
+        "ar": "عنب"
+      },
+      "image": "https://api.iconify.design/game-icons/grapes.svg"
+    },
+    {
+      "slug": "strawberries",
+      "category": "fruits",
+      "unit": "pack",
+      "name": {
+        "en": "Strawberries",
+        "fr": "Fraises",
+        "ar": "فراولة"
+      },
+      "note": {
+        "en": "Wash them only just before eating — wet berries turn to mush.",
+        "fr": "Ne les lavez qu'au dernier moment : mouillées, elles ramollissent vite.",
+        "ar": "اغسلها قبل الأكل مباشرة، فالبلل يفسدها بسرعة."
+      },
+      "image": "https://api.iconify.design/game-icons/strawberry.svg"
+    },
+    {
+      "slug": "raspberries",
+      "category": "fruits",
+      "unit": "pack",
+      "name": {
+        "en": "Raspberries",
+        "fr": "Framboises",
+        "ar": "توت العليق"
+      },
+      "image": "https://api.iconify.design/game-icons/raspberry.svg"
+    },
+    {
+      "slug": "mixed-berries",
+      "category": "fruits",
+      "unit": "pack",
+      "name": {
+        "en": "Mixed berries",
+        "fr": "Fruits rouges",
+        "ar": "توت مشكّل"
+      },
+      "image": "https://api.iconify.design/game-icons/berries-bowl.svg"
+    },
+    {
+      "slug": "cherries",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Cherries",
+        "fr": "Cerises",
+        "ar": "كرز"
+      },
+      "image": "https://api.iconify.design/game-icons/cherry.svg"
+    },
+    {
+      "slug": "peaches",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Peaches",
+        "fr": "Pêches",
+        "ar": "خوخ"
+      },
+      "image": "https://api.iconify.design/game-icons/peach.svg"
+    },
+    {
+      "slug": "plums",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Plums",
+        "fr": "Prunes",
+        "ar": "برقوق"
+      },
+      "image": "https://api.iconify.design/game-icons/plum.svg"
+    },
+    {
+      "slug": "pineapple",
+      "category": "fruits",
+      "unit": "pcs",
+      "name": {
+        "en": "Pineapple",
+        "fr": "Ananas",
+        "ar": "أناناس"
+      },
+      "image": "https://api.iconify.design/game-icons/pineapple.svg"
+    },
+    {
+      "slug": "kiwi",
+      "category": "fruits",
+      "unit": "pcs",
+      "name": {
+        "en": "Kiwi",
+        "fr": "Kiwi",
+        "ar": "كيوي"
+      },
+      "image": "https://api.iconify.design/game-icons/kiwi-fruit.svg"
+    },
+    {
+      "slug": "avocado",
+      "category": "fruits",
+      "unit": "pcs",
+      "name": {
+        "en": "Avocado",
+        "fr": "Avocat",
+        "ar": "أفوكادو"
+      },
+      "note": {
+        "en": "Buy it firm and let it ripen at home next to a banana.",
+        "fr": "Achetez-le ferme et laissez-le mûrir chez vous près d'une banane.",
+        "ar": "اشترها صلبة ودعها تنضج في البيت بجانب موزة."
+      },
+      "image": "https://api.iconify.design/game-icons/avocado.svg"
+    },
+    {
+      "slug": "tomatoes",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Tomatoes",
+        "fr": "Tomates",
+        "ar": "طماطم"
+      },
+      "note": {
+        "en": "Keep them at room temperature — the fridge dulls their flavour.",
+        "fr": "À conserver à température ambiante : le froid casse leur goût.",
+        "ar": "احفظها في حرارة الغرفة، فالثلاجة تُفقدها نكهتها."
+      },
+      "image": "https://api.iconify.design/game-icons/tomato.svg"
+    },
+    {
+      "slug": "carrots",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Carrots",
+        "fr": "Carottes",
+        "ar": "جزر"
+      },
+      "note": {
+        "en": "Twist the leafy tops off before storing — they draw moisture from the root.",
+        "fr": "Ôtez les fanes avant de les ranger : elles pompent l'humidité de la racine.",
+        "ar": "انزع الأوراق الخضراء قبل التخزين لأنها تسحب رطوبة الجذر."
+      },
+      "image": "https://api.iconify.design/game-icons/carrot.svg"
+    },
+    {
+      "slug": "potatoes",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Potatoes",
+        "fr": "Pommes de terre",
+        "ar": "بطاطس"
+      },
+      "note": {
+        "en": "Somewhere dark — light turns the skin green and bitter.",
+        "fr": "À l'abri de la lumière : elle verdit la peau et la rend amère.",
+        "ar": "احفظها في مكان مظلم، فالضوء يخضّر القشرة ويجعلها مرّة."
+      },
+      "image": "https://api.iconify.design/game-icons/potato.svg"
+    },
+    {
+      "slug": "cabbage",
+      "category": "vegetables",
+      "unit": "pcs",
+      "name": {
+        "en": "Cabbage",
+        "fr": "Chou",
+        "ar": "ملفوف"
+      },
+      "image": "https://api.iconify.design/game-icons/cabbage.svg"
+    },
+    {
+      "slug": "broccoli",
+      "category": "vegetables",
+      "unit": "pcs",
+      "name": {
+        "en": "Broccoli",
+        "fr": "Brocoli",
+        "ar": "بروكلي"
+      },
+      "image": "https://api.iconify.design/game-icons/broccoli.svg"
+    },
+    {
+      "slug": "bell-peppers",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Bell peppers",
+        "fr": "Poivrons",
+        "ar": "فلفل حلو"
+      },
+      "image": "https://api.iconify.design/game-icons/bell-pepper.svg"
+    },
+    {
+      "slug": "eggplant",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Eggplant",
+        "fr": "Aubergines",
+        "ar": "باذنجان"
+      },
+      "image": "https://api.iconify.design/game-icons/aubergine.svg"
+    },
+    {
+      "slug": "corn",
+      "category": "vegetables",
+      "unit": "pcs",
+      "name": {
+        "en": "Corn",
+        "fr": "Maïs",
+        "ar": "ذرة"
+      },
+      "image": "https://api.iconify.design/game-icons/corn.svg"
+    },
+    {
+      "slug": "mushrooms",
+      "category": "vegetables",
+      "unit": "pack",
+      "name": {
+        "en": "Mushrooms",
+        "fr": "Champignons",
+        "ar": "فطر"
+      },
+      "note": {
+        "en": "A paper bag, never plastic — trapped damp makes them slimy.",
+        "fr": "Un sac en papier, jamais en plastique : l'humidité les rend visqueux.",
+        "ar": "كيس ورقي لا بلاستيكي، فالرطوبة المحتبسة تجعله لزجًا."
+      },
+      "image": "https://api.iconify.design/game-icons/mushrooms.svg"
+    },
+    {
+      "slug": "peas",
+      "category": "vegetables",
+      "unit": "pack",
+      "name": {
+        "en": "Peas",
+        "fr": "Petits pois",
+        "ar": "بازلاء"
+      },
+      "image": "https://api.iconify.design/game-icons/peas.svg"
+    },
+    {
+      "slug": "pumpkin",
+      "category": "vegetables",
+      "unit": "pcs",
+      "name": {
+        "en": "Pumpkin",
+        "fr": "Potiron",
+        "ar": "يقطين"
+      },
+      "image": "https://api.iconify.design/game-icons/pumpkin.svg"
+    },
+    {
+      "slug": "leeks",
+      "category": "vegetables",
+      "unit": "pcs",
+      "name": {
+        "en": "Leeks",
+        "fr": "Poireaux",
+        "ar": "كرّاث"
+      },
+      "image": "https://api.iconify.design/game-icons/leek.svg"
+    },
+    {
+      "slug": "asparagus",
+      "category": "vegetables",
+      "unit": "pack",
+      "name": {
+        "en": "Asparagus",
+        "fr": "Asperges",
+        "ar": "هليون"
+      },
+      "image": "https://api.iconify.design/game-icons/asparagus.svg"
+    },
+    {
+      "slug": "beetroot",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Beetroot",
+        "fr": "Betteraves",
+        "ar": "شمندر"
+      },
+      "image": "https://api.iconify.design/game-icons/beet.svg"
+    },
+    {
+      "slug": "olives",
+      "category": "vegetables",
+      "unit": "g",
+      "name": {
+        "en": "Olives",
+        "fr": "Olives",
+        "ar": "زيتون"
+      },
+      "image": "https://api.iconify.design/game-icons/olive.svg"
+    },
+    {
+      "slug": "garlic",
+      "category": "herbs-spices",
+      "unit": "pcs",
+      "name": {
+        "en": "Garlic",
+        "fr": "Ail",
+        "ar": "ثوم"
+      },
+      "note": {
+        "en": "Open air, never the fridge — cold makes it sprout and soften.",
+        "fr": "À l'air libre, jamais au frais : le froid le fait germer et ramollir.",
+        "ar": "في الهواء الطلق لا في الثلاجة، فالبرودة تُنبته وتليّنه."
+      },
+      "image": "https://api.iconify.design/game-icons/garlic.svg"
+    },
+    {
+      "slug": "chilli-peppers",
+      "category": "herbs-spices",
+      "unit": "g",
+      "name": {
+        "en": "Chilli peppers",
+        "fr": "Piments",
+        "ar": "فلفل حار"
+      },
+      "image": "https://api.iconify.design/game-icons/chili-pepper.svg"
+    },
+    {
+      "slug": "fresh-herbs",
+      "category": "herbs-spices",
+      "unit": "pack",
+      "name": {
+        "en": "Fresh herbs",
+        "fr": "Herbes fraîches",
+        "ar": "أعشاب طازجة"
+      },
+      "note": {
+        "en": "Stand them in a glass of water in the fridge and they keep for a week.",
+        "fr": "Dans un verre d'eau au réfrigérateur, elles tiennent une semaine.",
+        "ar": "ضعها في كوب ماء داخل الثلاجة لتبقى طازجة أسبوعًا."
+      },
+      "image": "https://api.iconify.design/game-icons/herbs-bundle.svg"
+    },
+    {
+      "slug": "salt",
+      "category": "herbs-spices",
+      "unit": "pack",
+      "name": {
+        "en": "Salt",
+        "fr": "Sel",
+        "ar": "ملح"
+      },
+      "image": "https://api.iconify.design/game-icons/salt-shaker.svg"
+    },
+    {
+      "slug": "beef",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Beef",
+        "fr": "Bœuf",
+        "ar": "لحم بقري"
+      },
+      "image": "https://api.iconify.design/game-icons/steak.svg"
+    },
+    {
+      "slug": "lamb",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Lamb",
+        "fr": "Agneau",
+        "ar": "لحم ضأن"
+      },
+      "image": "https://api.iconify.design/game-icons/meat.svg"
+    },
+    {
+      "slug": "chicken",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Chicken",
+        "fr": "Poulet",
+        "ar": "دجاج"
+      },
+      "note": {
+        "en": "Bottom shelf of the fridge, so nothing below it can be dripped on.",
+        "fr": "Sur la clayette du bas, pour ne rien contaminer en dessous.",
+        "ar": "في الرف السفلي من الثلاجة حتى لا يقطر على ما تحته."
+      },
+      "image": "https://api.iconify.design/game-icons/chicken-leg.svg"
+    },
+    {
+      "slug": "roast-chicken",
+      "category": "meat-fish",
+      "unit": "pcs",
+      "name": {
+        "en": "Roast chicken",
+        "fr": "Poulet rôti",
+        "ar": "دجاج مشوي"
+      },
+      "image": "https://api.iconify.design/game-icons/roast-chicken.svg"
+    },
+    {
+      "slug": "bacon",
+      "category": "meat-fish",
+      "unit": "pack",
+      "name": {
+        "en": "Bacon",
+        "fr": "Bacon",
+        "ar": "لحم مقدد"
+      },
+      "image": "https://api.iconify.design/game-icons/bacon.svg"
+    },
+    {
+      "slug": "sausages",
+      "category": "meat-fish",
+      "unit": "pack",
+      "name": {
+        "en": "Sausages",
+        "fr": "Saucisses",
+        "ar": "نقانق"
+      },
+      "image": "https://api.iconify.design/game-icons/sausage.svg"
+    },
+    {
+      "slug": "fish",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Fish",
+        "fr": "Poisson",
+        "ar": "سمك"
+      },
+      "note": {
+        "en": "Buy it the day you cook it; the eyes should be clear, not clouded.",
+        "fr": "À acheter le jour de la cuisson : l'œil doit être clair, non voilé.",
+        "ar": "اشترِه يوم طهيه، ويجب أن تكون عيناه صافيتين لا عكرتين."
+      },
+      "image": "https://api.iconify.design/game-icons/fish-cooked.svg"
+    },
+    {
+      "slug": "salmon",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Salmon",
+        "fr": "Saumon",
+        "ar": "سلمون"
+      },
+      "note": {
+        "en": "Firm flesh that springs back is fresh; a dull, gaping fillet is not.",
+        "fr": "Une chair ferme qui reprend sa forme est fraîche ; un filet terne, non.",
+        "ar": "اللحم المتماسك الذي يعود لشكله طازج، والباهت المتفكك ليس كذلك."
+      },
+      "image": "https://api.iconify.design/game-icons/salmon.svg"
+    },
+    {
+      "slug": "canned-fish",
+      "category": "meat-fish",
+      "unit": "can",
+      "name": {
+        "en": "Canned fish",
+        "fr": "Poisson en conserve",
+        "ar": "سمك معلب"
+      },
+      "image": "https://api.iconify.design/game-icons/canned-fish.svg"
+    },
+    {
+      "slug": "shrimp",
+      "category": "meat-fish",
+      "unit": "g",
+      "name": {
+        "en": "Shrimp",
+        "fr": "Crevettes",
+        "ar": "روبيان"
+      },
+      "image": "https://api.iconify.design/game-icons/shrimp.svg"
+    },
+    {
+      "slug": "squid",
+      "category": "meat-fish",
+      "unit": "g",
+      "name": {
+        "en": "Squid",
+        "fr": "Calmar",
+        "ar": "حبار"
+      },
+      "image": "https://api.iconify.design/game-icons/squid.svg"
+    },
+    {
+      "slug": "crab",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Crab",
+        "fr": "Crabe",
+        "ar": "سلطعون"
+      },
+      "image": "https://api.iconify.design/game-icons/crab.svg"
+    },
+    {
+      "slug": "oysters",
+      "category": "meat-fish",
+      "unit": "kg",
+      "name": {
+        "en": "Oysters",
+        "fr": "Huîtres",
+        "ar": "محار"
+      },
+      "image": "https://api.iconify.design/game-icons/oyster.svg"
+    },
+    {
+      "slug": "milk",
+      "category": "dairy",
+      "unit": "l",
+      "name": {
+        "en": "Milk",
+        "fr": "Lait",
+        "ar": "حليب"
+      },
+      "note": {
+        "en": "Store it at the back of the fridge, not in the door where it warms up.",
+        "fr": "Rangez-le au fond du réfrigérateur, pas dans la porte où il se réchauffe.",
+        "ar": "ضعه في عمق الثلاجة لا في بابها حيث ترتفع الحرارة."
+      },
+      "image": "https://api.iconify.design/game-icons/milk-carton.svg"
+    },
+    {
+      "slug": "cheese",
+      "category": "dairy",
+      "unit": "g",
+      "name": {
+        "en": "Cheese",
+        "fr": "Fromage",
+        "ar": "جبن"
+      },
+      "note": {
+        "en": "Wrap it in paper rather than plastic so it can breathe.",
+        "fr": "Emballez-le dans du papier plutôt que du plastique, pour qu'il respire.",
+        "ar": "لفّه بورق لا بالبلاستيك حتى يتنفس."
+      },
+      "image": "https://api.iconify.design/game-icons/cheese-wedge.svg"
+    },
+    {
+      "slug": "butter",
+      "category": "dairy",
+      "unit": "pack",
+      "name": {
+        "en": "Butter",
+        "fr": "Beurre",
+        "ar": "زبدة"
+      },
+      "image": "https://api.iconify.design/game-icons/butter.svg"
+    },
+    {
+      "slug": "bread",
+      "category": "bakery",
+      "unit": "pcs",
+      "name": {
+        "en": "Bread",
+        "fr": "Pain",
+        "ar": "خبز"
+      },
+      "note": {
+        "en": "A bread box or paper bag keeps it better than the fridge.",
+        "fr": "Une huche ou un sac en papier le garde mieux que le réfrigérateur.",
+        "ar": "علبة الخبز أو كيس الورق أفضل له من الثلاجة."
+      },
+      "image": "https://api.iconify.design/game-icons/bread.svg"
+    },
+    {
+      "slug": "sliced-bread",
+      "category": "bakery",
+      "unit": "pack",
+      "name": {
+        "en": "Sliced bread",
+        "fr": "Pain de mie",
+        "ar": "خبز شرائح"
+      },
+      "image": "https://api.iconify.design/game-icons/bread-slice.svg"
+    },
+    {
+      "slug": "cupcakes",
+      "category": "bakery",
+      "unit": "pack",
+      "name": {
+        "en": "Cupcakes",
+        "fr": "Cupcakes",
+        "ar": "كب كيك"
+      },
+      "image": "https://api.iconify.design/game-icons/cupcake.svg"
+    },
+    {
+      "slug": "cookies",
+      "category": "bakery",
+      "unit": "pack",
+      "name": {
+        "en": "Cookies",
+        "fr": "Biscuits",
+        "ar": "بسكويت"
+      },
+      "image": "https://api.iconify.design/game-icons/cookie.svg"
+    },
+    {
+      "slug": "doughnuts",
+      "category": "bakery",
+      "unit": "pack",
+      "name": {
+        "en": "Doughnuts",
+        "fr": "Beignets",
+        "ar": "دوناتس"
+      },
+      "image": "https://api.iconify.design/game-icons/donut.svg"
+    },
+    {
+      "slug": "flour",
+      "category": "pantry",
+      "unit": "bag",
+      "name": {
+        "en": "Flour",
+        "fr": "Farine",
+        "ar": "دقيق"
+      },
+      "note": {
+        "en": "Seal it well — open flour picks up damp and pantry pests.",
+        "fr": "Bien refermer : la farine à l'air prend l'humidité et les mites.",
+        "ar": "أغلق العبوة جيدًا، فالدقيق المكشوف يمتص الرطوبة ويجذب الحشرات."
+      },
+      "image": "https://api.iconify.design/game-icons/flour.svg"
+    },
+    {
+      "slug": "oats",
+      "category": "pantry",
+      "unit": "bag",
+      "name": {
+        "en": "Oats",
+        "fr": "Flocons d'avoine",
+        "ar": "شوفان"
+      },
+      "note": {
+        "en": "Rolled oats cook in minutes; steel-cut take half an hour — check which you bought.",
+        "fr": "Les flocons cuisent en minutes, l'avoine coupée en trente : vérifiez l'étiquette.",
+        "ar": "رقائق الشوفان تنضج بدقائق والمجروش بنصف ساعة، فتحقق من النوع."
+      },
+      "image": "https://api.iconify.design/game-icons/oat.svg"
+    },
+    {
+      "slug": "wheat",
+      "category": "pantry",
+      "unit": "bag",
+      "name": {
+        "en": "Wheat",
+        "fr": "Blé",
+        "ar": "قمح"
+      },
+      "image": "https://api.iconify.design/game-icons/wheat.svg"
+    },
+    {
+      "slug": "whole-grains",
+      "category": "pantry",
+      "unit": "bag",
+      "name": {
+        "en": "Whole grains",
+        "fr": "Céréales complètes",
+        "ar": "حبوب كاملة"
+      },
+      "image": "https://api.iconify.design/game-icons/grain-bundle.svg"
+    },
+    {
+      "slug": "pasta",
+      "category": "pantry",
+      "unit": "pack",
+      "name": {
+        "en": "Pasta",
+        "fr": "Pâtes",
+        "ar": "معكرونة"
+      },
+      "note": {
+        "en": "Salt the water like the sea — the only chance to season the pasta itself.",
+        "fr": "Salez l'eau comme la mer : seule occasion d'assaisonner les pâtes.",
+        "ar": "ملّح الماء بسخاء، فهي الفرصة الوحيدة لتتبيل المعكرونة نفسها."
+      },
+      "image": "https://api.iconify.design/game-icons/noodles.svg"
+    },
+    {
+      "slug": "sugar",
+      "category": "pantry",
+      "unit": "bag",
+      "name": {
+        "en": "Sugar",
+        "fr": "Sucre",
+        "ar": "سكر"
+      },
+      "image": "https://api.iconify.design/game-icons/sugar-cane.svg"
+    },
+    {
+      "slug": "honey",
+      "category": "pantry",
+      "unit": "bottle",
+      "name": {
+        "en": "Honey",
+        "fr": "Miel",
+        "ar": "عسل"
+      },
+      "note": {
+        "en": "Crystallised honey is not spoiled — warm the jar gently and it clears.",
+        "fr": "Un miel cristallisé n'est pas gâté : réchauffez doucement le pot.",
+        "ar": "تبلور العسل ليس فسادًا؛ سخّن الوعاء برفق ليعود صافيًا."
+      },
+      "image": "https://api.iconify.design/game-icons/honeycomb.svg"
+    },
+    {
+      "slug": "peanuts",
+      "category": "pantry",
+      "unit": "g",
+      "name": {
+        "en": "Peanuts",
+        "fr": "Cacahuètes",
+        "ar": "فول سوداني"
+      },
+      "image": "https://api.iconify.design/game-icons/peanut.svg"
+    },
+    {
+      "slug": "ketchup",
+      "category": "pantry",
+      "unit": "bottle",
+      "name": {
+        "en": "Ketchup",
+        "fr": "Ketchup",
+        "ar": "كاتشب"
+      },
+      "image": "https://api.iconify.design/game-icons/ketchup.svg"
+    },
+    {
+      "slug": "ice",
+      "category": "frozen",
+      "unit": "bag",
+      "name": {
+        "en": "Ice",
+        "fr": "Glaçons",
+        "ar": "ثلج"
+      },
+      "image": "https://api.iconify.design/game-icons/ice-cube.svg"
+    },
+    {
+      "slug": "ice-cream",
+      "category": "frozen",
+      "unit": "box",
+      "name": {
+        "en": "Ice cream",
+        "fr": "Crème glacée",
+        "ar": "آيس كريم"
+      },
+      "note": {
+        "en": "Back of the freezer — the door thaws and refreezes it into crystals.",
+        "fr": "Au fond du congélateur : la porte le fait fondre puis recristalliser.",
+        "ar": "في عمق الفريزر، فالباب يذيبه ويعيد تجميده حبيبات ثلجية."
+      },
+      "image": "https://api.iconify.design/game-icons/ice-cream-cone.svg"
+    },
+    {
+      "slug": "frozen-fries",
+      "category": "frozen",
+      "unit": "bag",
+      "name": {
+        "en": "Frozen fries",
+        "fr": "Frites surgelées",
+        "ar": "بطاطس مقلية مجمدة"
+      },
+      "image": "https://api.iconify.design/game-icons/french-fries.svg"
+    },
+    {
+      "slug": "dumplings",
+      "category": "frozen",
+      "unit": "pack",
+      "name": {
+        "en": "Dumplings",
+        "fr": "Raviolis",
+        "ar": "زلابية"
+      },
+      "image": "https://api.iconify.design/game-icons/dumpling.svg"
+    },
+    {
+      "slug": "chocolate",
+      "category": "snacks-sweets",
+      "unit": "pack",
+      "name": {
+        "en": "Chocolate",
+        "fr": "Chocolat",
+        "ar": "شوكولاتة"
+      },
+      "image": "https://api.iconify.design/game-icons/chocolate-bar.svg"
+    },
+    {
+      "slug": "popcorn",
+      "category": "snacks-sweets",
+      "unit": "bag",
+      "name": {
+        "en": "Popcorn",
+        "fr": "Pop-corn",
+        "ar": "فشار"
+      },
+      "image": "https://api.iconify.design/game-icons/popcorn.svg"
+    },
+    {
+      "slug": "nachos",
+      "category": "snacks-sweets",
+      "unit": "bag",
+      "name": {
+        "en": "Nachos",
+        "fr": "Nachos",
+        "ar": "ناتشوز"
+      },
+      "image": "https://api.iconify.design/game-icons/nachos.svg"
+    },
+    {
+      "slug": "jelly",
+      "category": "snacks-sweets",
+      "unit": "pack",
+      "name": {
+        "en": "Jelly",
+        "fr": "Gelée",
+        "ar": "جيلي"
+      },
+      "image": "https://api.iconify.design/game-icons/jelly.svg"
+    },
+    {
+      "slug": "coffee",
+      "category": "drinks",
+      "unit": "pack",
+      "name": {
+        "en": "Coffee",
+        "fr": "Café",
+        "ar": "قهوة"
+      },
+      "note": {
+        "en": "Keep the beans in an airtight jar in the cupboard, not the freezer.",
+        "fr": "Gardez les grains dans un bocal hermétique au placard, pas au congélateur.",
+        "ar": "احفظ الحبوب في وعاء محكم داخل الخزانة لا في الفريزر."
+      },
+      "image": "https://api.iconify.design/game-icons/coffee-beans.svg"
+    },
+    {
+      "slug": "tea",
+      "category": "drinks",
+      "unit": "box",
+      "name": {
+        "en": "Tea",
+        "fr": "Thé",
+        "ar": "شاي"
+      },
+      "image": "https://api.iconify.design/game-icons/teapot.svg"
+    },
+    {
+      "slug": "water",
+      "category": "drinks",
+      "unit": "l",
+      "name": {
+        "en": "Water",
+        "fr": "Eau",
+        "ar": "ماء"
+      },
+      "image": "https://api.iconify.design/game-icons/water-flask.svg"
+    },
+    {
+      "slug": "juice",
+      "category": "drinks",
+      "unit": "l",
+      "name": {
+        "en": "Juice",
+        "fr": "Jus",
+        "ar": "عصير"
+      },
+      "image": "https://api.iconify.design/game-icons/jug.svg"
+    },
+    {
+      "slug": "soft-drinks",
+      "category": "drinks",
+      "unit": "can",
+      "name": {
+        "en": "Soft drinks",
+        "fr": "Boissons gazeuses",
+        "ar": "مشروبات غازية"
+      },
+      "image": "https://api.iconify.design/game-icons/soda-can.svg"
+    },
+    {
+      "slug": "soap",
+      "category": "household",
+      "unit": "pcs",
+      "name": {
+        "en": "Soap",
+        "fr": "Savon",
+        "ar": "صابون"
+      },
+      "image": "https://api.iconify.design/game-icons/soap.svg"
+    },
+    {
+      "slug": "broom",
+      "category": "household",
+      "unit": "pcs",
+      "name": {
+        "en": "Broom",
+        "fr": "Balai",
+        "ar": "مكنسة"
+      },
+      "image": "https://api.iconify.design/game-icons/broom.svg"
+    },
+    {
+      "slug": "basket",
+      "category": "household",
+      "unit": "pcs",
+      "name": {
+        "en": "Basket",
+        "fr": "Panier",
+        "ar": "سلة"
+      },
+      "image": "https://api.iconify.design/game-icons/basket.svg"
+    },
+    {
+      "slug": "bin",
+      "category": "household",
+      "unit": "pcs",
+      "name": {
+        "en": "Bin",
+        "fr": "Poubelle",
+        "ar": "سلة مهملات"
+      },
+      "image": "https://api.iconify.design/game-icons/trash-can.svg"
+    },
+    {
+      "slug": "candles",
+      "category": "household",
+      "unit": "pack",
+      "name": {
+        "en": "Candles",
+        "fr": "Bougies",
+        "ar": "شموع"
+      },
+      "image": "https://api.iconify.design/game-icons/candles.svg"
+    },
+    {
+      "slug": "batteries",
+      "category": "household",
+      "unit": "pack",
+      "name": {
+        "en": "Batteries",
+        "fr": "Piles",
+        "ar": "بطاريات"
+      },
+      "note": {
+        "en": "Buy the size, not the brand — check the device before you leave home.",
+        "fr": "Achetez le format, pas la marque : vérifiez l'appareil avant de partir.",
+        "ar": "اشترِ المقاس لا العلامة، وتحقق من الجهاز قبل خروجك."
+      },
+      "image": "https://api.iconify.design/game-icons/batteries.svg"
+    },
+    {
+      "slug": "light-bulbs",
+      "category": "household",
+      "unit": "pcs",
+      "name": {
+        "en": "Light bulbs",
+        "fr": "Ampoules",
+        "ar": "مصابيح"
+      },
+      "image": "https://api.iconify.design/game-icons/light-bulb.svg"
+    },
+    {
+      "slug": "paper-bags",
+      "category": "household",
+      "unit": "pack",
+      "name": {
+        "en": "Paper bags",
+        "fr": "Sacs en papier",
+        "ar": "أكياس ورقية"
+      },
+      "image": "https://api.iconify.design/game-icons/paper-bag-folded.svg"
+    }
+  ]
+}

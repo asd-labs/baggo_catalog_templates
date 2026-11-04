@@ -1,0 +1,249 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://raw.githubusercontent.com/asd-labs/baggo_catalog/main/schema/catalog.schema.json",
+  "title": "Baggo catalog",
+  "description": "One standalone JSON file: who the catalog is, its categories, its items, and optionally its own picture, its list pins and the icons for Baggo's Missing, Favorites and Recent shortcuts. Images are the only external resource, and in a standalone file every one of them is an absolute https:// URL. Anyone may publish one; a user adds it by link or from a local file. This describes the FORMAT — what any catalog may be — so nearly everything is optional; a publisher's own house rules (every name in five languages, one image size) are theirs to add on top and are not written here.",
+  "type": "object",
+  "required": ["schema_version", "id", "name", "version", "categories", "items"],
+  "additionalProperties": false,
+  "properties": {
+    "$schema": {
+      "description": "Editor convenience. Baggo ignores it.",
+      "type": "string"
+    },
+    "schema_version": {
+      "description": "The shape of this file. 2 is the current single-file format. A client that meets a HIGHER number imports what it can and warns that the catalog was made for a newer Baggo, rather than refusing it.",
+      "const": 2
+    },
+
+    "id": {
+      "description": "This catalog's permanent identity, chosen once and never changed. Baggo keys an installed catalog off it — not the URL it came from, not the filename — so the same catalog fetched from a mirror or handed over as a file is still the same catalog, and an item's identity is (this id, its slug). Reverse-DNS is the recommendation. Changing it publishes a second catalog that happens to look like the first.",
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 128,
+      "pattern": "^[a-z0-9]+([._-][a-z0-9]+)*$"
+    },
+    "name": {
+      "description": "What the user sees in the catalog list, and on the screen that asks them to approve this catalog. They approve a catalog, not a URL, so this has to say what it is.\n\nLocalized like every other name in the file: a plain string is language-neutral, a locale map is read in the app's language. A catalog that names its items in five languages and itself in one is translated everywhere except the screen that asks for consent.",
+      "$ref": "#/$defs/text"
+    },
+    "version": {
+      "description": "An integer incremented on every publish. Clients compare this — not a tag, not a date.",
+      "type": "integer",
+      "minimum": 1
+    },
+
+    "description": {
+      "description": "One or two sentences, shown before the user installs it. Localized like `name`: a plain string, or a locale map.",
+      "$ref": "#/$defs/text"
+    },
+    "homepage": {
+      "description": "Where a user reports a problem with this catalog. Publish one.",
+      "$ref": "#/$defs/url"
+    },
+    "author": { "type": "string", "minLength": 1 },
+    "license": {
+      "description": "How this catalog's data may be reused. An SPDX identifier or a URL.",
+      "type": "string",
+      "minLength": 1
+    },
+
+    "default_locale": {
+      "description": "The locale a name falls back to when it has no entry for the app's language. Absent means the first entry in the map.",
+      "$ref": "#/$defs/locale"
+    },
+    "expires": {
+      "description": "Days between update checks for a catalog fetched by URL. Absent means 7. A catalog imported from a file never re-checks whatever this says.",
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 365
+    },
+
+    "icon": {
+      "description": "A picture that stands for the CATALOG itself wherever Baggo names it: the catalogs list, the item catalog's filter, an item's way back to where it came from. A FILE only (SVG, PNG or WebP, never JPEG) — a name from the icon vocabulary is not accepted. 128px square PNG is what Baggo's own catalogs publish. It is drawn as published, never tinted and never set on a tile. Absent or unusable is not an issue: Baggo's own catalog mark is drawn instead.",
+      "$ref": "#/$defs/iconFile"
+    },
+
+    "pins": {
+      "description": "Pictures a SHOPPING LIST can wear in place of an icon. Where any installed catalog publishes pins, the list-icon picker offers those INSTEAD of Baggo's icon vocabulary. Categories always keep the vocabulary. A list stores the choice as pin:<slug>, so a slug is permanent; where two catalogs publish the same slug the first installed wins, and a list whose catalog is gone falls back to the default bag. Drawn as published, never tinted. An entry with no slug, a duplicate slug, or an image Baggo cannot draw is silently skipped. At most 60.",
+      "type": "array",
+      "maxItems": 60,
+      "items": {
+        "type": "object",
+        "required": ["slug", "image"],
+        "additionalProperties": false,
+        "properties": {
+          "slug": { "$ref": "#/$defs/slug" },
+          "image": {
+            "description": "An icon FILE, resolved and restricted exactly as a category icon file is: SVG, PNG or WebP, never JPEG.",
+            "$ref": "#/$defs/iconFile"
+          }
+        }
+      }
+    },
+
+    "shortcuts": {
+      "description": "What this catalog draws Baggo's OWN shortcuts with — the Missing, Favorites and Recent shelves that sit in the same strip as your categories. Optional, and most catalogs leave it out: it is here so a catalog publishing an icon set of its own can finish the row, rather than leaving three of Baggo's own glyphs standing in the middle of it.\n\nThese are Baggo's shelves and not yours: you may say what they are drawn with and nothing else. Where two installed catalogs dress the same shortcut, the first installed wins. The received-shares inbox is deliberately not among them — it is about people rather than groceries.",
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "missing": {
+          "description": "The icon for Missing — the shelf an item waits on when the shop did not have it.\n\nSame two shapes a category icon takes (see categories[].icon): one of Baggo's icon names, or an icon FILE of your own (SVG, PNG or WebP, never JPEG) — absolute https:// or relative to THIS file.\n\nUnlike a category, a shortcut needs no fallback name beside a file. An absent, unknown or unfetchable value leaves BAGGO'S OWN glyph for that shortcut, which already draws what it means better than the generic category mark would.",
+          "anyOf": [
+            { "$ref": "#/$defs/iconFile" },
+            { "$ref": "#/$defs/iconName" }
+          ]
+        },
+        "favorites": {
+          "description": "The icon for Favorites — the items the user loves.\n\nSame two shapes a category icon takes (see categories[].icon): one of Baggo's icon names, or an icon FILE of your own (SVG, PNG or WebP, never JPEG) — absolute https:// or relative to THIS file.\n\nUnlike a category, a shortcut needs no fallback name beside a file. An absent, unknown or unfetchable value leaves BAGGO'S OWN glyph for that shortcut, which already draws what it means better than the generic category mark would.",
+          "anyOf": [
+            { "$ref": "#/$defs/iconFile" },
+            { "$ref": "#/$defs/iconName" }
+          ]
+        },
+        "recent": {
+          "description": "The icon for Recent — what was bought lately.\n\nSame two shapes a category icon takes (see categories[].icon): one of Baggo's icon names, or an icon FILE of your own (SVG, PNG or WebP, never JPEG) — absolute https:// or relative to THIS file.\n\nUnlike a category, a shortcut needs no fallback name beside a file. An absent, unknown or unfetchable value leaves BAGGO'S OWN glyph for that shortcut, which already draws what it means better than the generic category mark would.",
+          "anyOf": [
+            { "$ref": "#/$defs/iconFile" },
+            { "$ref": "#/$defs/iconName" }
+          ]
+        }
+      }
+    },
+
+    "categories": {
+      "description": "Ordered: array order is display order, and Baggo seeds shelf rank from it.",
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 200,
+      "items": {
+        "type": "object",
+        "required": ["slug", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "slug": { "$ref": "#/$defs/slug" },
+          "icon": {
+            "description": "The category's icon: either one of Baggo's icon names, or an icon FILE of your own (SVG, PNG or WebP). Only a CATEGORY carries an icon — it is what every row of that category falls back to when it has no photo.\n\nA NAME is one of the values listed under $defs/iconName, which are the vocabulary as of this schema. The FORMAT itself accepts any slug: a name Baggo does not know falls back to the generic category mark (a triangle, a square and a circle) and is reported as a warning rather than a failure, so a catalog naming an icon from a newer Baggo still imports.\n\nA FILE is an absolute https:// URL or a path relative to THIS file, ending in .svg, .png or .webp — never .jpg, which has no transparency. An SVG that fills with currentColor is drawn in the app's own ink, following the user's colour scheme; one that names its own colours keeps them, and so does every PNG or WebP, which is how a coloured icon set differs from a tinted one. A raster is best square and at least 128px. Draw on a 24x24 viewBox with roughly a 2px stroke to sit level with Baggo's own icons — nothing normalizes a file the app did not ship. A build that predates custom icons, and a device that cannot fetch the file, draw that same generic mark instead. A custom icon is a fact about the catalog, not the account: it is local to the device and never synced.",
+            "anyOf": [
+              { "$ref": "#/$defs/iconFile" },
+              { "$ref": "#/$defs/iconName" }
+            ]
+          },
+          "name": { "$ref": "#/$defs/text" }
+        }
+      }
+    },
+
+    "items": {
+      "type": "array",
+      "minItems": 1,
+      "maxItems": 5000,
+      "items": {
+        "type": "object",
+        "required": ["slug", "category", "name"],
+        "additionalProperties": false,
+        "properties": {
+          "slug": {
+            "description": "Permanent. An item's identity is (catalog id, slug), so a slug is never reused for a different product — a wrong one is retired by adding a new one, not by renaming.",
+            "$ref": "#/$defs/slug"
+          },
+          "category": {
+            "description": "Must match a category slug in this same file. An item whose category does not resolve is skipped and reported; the rest of the catalog still imports.",
+            "$ref": "#/$defs/slug"
+          },
+          "unit": {
+            "description": "One of Baggo's unit names. Unknown or absent means no unit.",
+            "enum": ["pcs", "pack", "kg", "g", "l", "ml", "bottle", "can", "bag", "box"]
+          },
+          "name": { "$ref": "#/$defs/text" },
+          "note": {
+            "description": "One short buying or storage tip. It earns its place only when it tells the shopper something the name does not. A single plain sentence, no markup and no line breaks; Baggo reads up to 356 characters per translation and clamps the rest rather than rejecting the file, but the item screen edits 144, so keep a tip to one short sentence.",
+            "$ref": "#/$defs/text"
+          },
+          "image": {
+            "description": "An absolute https:// URL, or a path relative to THIS file. Absent means the category's icon is shown. A photo (JPEG, PNG, WebP) is drawn as it comes; an SVG is drawn in the app's own colour, which is what makes a monochrome icon set — one that fills with currentColor — look like part of the app rather than a set of foreign pictures. A STANDALONE catalog — one handed over as a file rather than served from a folder — must use absolute URLs: a relative path has no location to resolve against and Baggo drops it.",
+            "$ref": "#/$defs/image"
+          }
+        }
+      }
+    }
+  },
+
+  "$defs": {
+    "iconName": {
+      "description": "One of Baggo's icon names, listed so an editor can complete them and catch a typo.",
+      "enum": [
+        "apple", "archive", "baby-bottle", "baguette", "basket", "bathtub",
+        "battery", "blender", "book", "books", "bottle", "bowl", "bread",
+        "brush", "bucket", "building", "bulb", "burger", "cake", "candy",
+        "carrot", "cat", "cheese", "cocktail", "coffee", "collage",
+        "cookie", "cup", "dog", "droplet", "egg", "first-aid-kit", "fish",
+        "flower", "football", "fridge", "fried-egg", "gift", "grain",
+        "grocery-bag", "hand-sanitizer", "house-gear", "ice-cream", "jar",
+        "laptop", "lotus", "luggage", "meat", "microwave", "milk", "mug",
+        "needle", "notebook", "nut", "orange", "orange-slice", "package",
+        "packages", "palette", "paw", "pen", "pepper", "pill", "pizza",
+        "plant", "popcorn", "printer", "puzzle", "ruler", "salt", "school",
+        "scissors", "serving-dish", "shapes", "shopping-bag",
+        "shopping-cart",
+        "smartphone", "snowflake", "soap", "soup", "sparkles", "spray",
+        "stack", "stove", "tea-bag", "toilet-paper", "tools", "tooth",
+        "trash", "tshirt", "utensils", "vacuum", "wash", "washing-machine"
+      ]
+    },
+    "iconFile": {
+      "description": "An icon FILE: SVG, PNG or WebP — never JPEG, which carries no transparency and would put an opaque rectangle in a row of glyphs. An absolute https:// URL, or a path relative to the catalog file. A STANDALONE catalog — one handed over as a file rather than served from a folder — must use an absolute URL, since a relative path has no location to resolve against and Baggo drops it. Up to 2048 characters; the file itself is capped at 2 MB.",
+      "type": "string",
+      "maxLength": 2048,
+      "pattern": "\\.(svg|png|webp)([?#].*)?$"
+    },
+
+    "slug": {
+      "description": "Lowercase, hyphen-separated, unique within its array.",
+      "type": "string",
+      "pattern": "^[a-z0-9]+(-[a-z0-9]+)*$"
+    },
+    "locale": {
+      "description": "A BCP 47 language tag (IETF BCP 47, built on RFC 5646), written canonically: language in lower case, then an optional script in title case, then an optional region in upper case (or three digits) and optional variants. Examples: en, ar, en-US, ar-MA, zh-Hant-TW, es-419. Baggo matches the reader's language against these tags, falling back from ar-MA to ar, and names the language in the app's own language wherever it lists them.",
+      "type": "string",
+      "pattern": "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-([A-Z]{2}|[0-9]{3}))?(-([a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$"
+    },
+    "url": {
+      "type": "string",
+      "pattern": "^https://[^\\s]+$"
+    },
+    "text": {
+      "description": "Either a plain string — language-neutral, shown as written whatever the app's language — or a map of locale code to string. No locale is mandatory: a client uses the app's language, then default_locale, then the first entry in the map.",
+      "anyOf": [
+        {
+          "description": "a plain string",
+          "type": "string",
+          "minLength": 1
+        },
+        {
+          "description": "a map of BCP 47 language tag to string (see $defs/locale)",
+          "type": "object",
+          "minProperties": 1,
+          "additionalProperties": false,
+          "patternProperties": {
+            "^[a-z]{2,3}(-[A-Z][a-z]{3})?(-([A-Z]{2}|[0-9]{3}))?(-([a-z0-9]{5,8}|[0-9][a-z0-9]{3}))*$": { "type": "string", "minLength": 1 }
+          }
+        }
+      ]
+    },
+    "image": {
+      "anyOf": [
+        {
+          "description": "an absolute https:// URL",
+          "type": "string",
+          "pattern": "^https://[^\\s]+$"
+        },
+        {
+          "description": "a .jpg, .jpeg, .png, .webp or .svg path relative to this file, with no leading slash and no walking upwards",
+          "type": "string",
+          "pattern": "^[a-z0-9]+([-_]?[a-z0-9]+)*(/[a-z0-9]+([-_]?[a-z0-9]+)*)*\\.(jpg|jpeg|png|webp|svg)$"
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,268 @@
+{
+  "$schema": "../schema/catalog.schema.json",
+  "schema_version": 2,
+  "id": "com.example.corner-shop",
+  "name": {
+    "en": "Corner Shop",
+    "fr": "Épicerie du coin",
+    "ar": "بقالة الحي"
+  },
+  "description": {
+    "en": "A standalone starter catalog — fifteen things that are always on the list, in one file with no folder beside it.",
+    "fr": "Un catalogue de départ autonome — quinze choses qui sont toujours sur la liste, dans un seul fichier sans dossier à côté.",
+    "ar": "كتالوج بداية مستقل — خمسة عشر شيئًا لا تغيب عن القائمة، في ملف واحد بلا مجلد بجانبه."
+  },
+  "homepage": "https://github.com/example/corner-shop",
+  "author": "Your Name",
+  "license": "CC0-1.0",
+  "version": 1,
+  "default_locale": "en",
+  "expires": 7,
+  "icon": "https://api.iconify.design/tabler/building-store.svg",
+  "shortcuts": {
+    "missing": "https://api.iconify.design/tabler/shopping-bag-exclamation.svg",
+    "favorites": "https://api.iconify.design/tabler/heart.svg",
+    "recent": "https://api.iconify.design/tabler/history.svg"
+  },
+  "pins": [
+    {
+      "slug": "groceries",
+      "image": "https://api.iconify.design/tabler/shopping-bag.svg"
+    },
+    {
+      "slug": "home",
+      "image": "https://api.iconify.design/tabler/home.svg"
+    },
+    {
+      "slug": "fresh",
+      "image": "https://api.iconify.design/tabler/apple.svg"
+    },
+    {
+      "slug": "treats",
+      "image": "https://api.iconify.design/tabler/cake.svg"
+    }
+  ],
+  "categories": [
+    {
+      "slug": "fruits",
+      "icon": "https://api.iconify.design/tabler/apple.svg",
+      "name": {
+        "en": "Fruits",
+        "fr": "Fruits",
+        "ar": "فواكه"
+      }
+    },
+    {
+      "slug": "vegetables",
+      "icon": "https://api.iconify.design/tabler/carrot.svg",
+      "name": {
+        "en": "Vegetables",
+        "fr": "Légumes",
+        "ar": "خضار"
+      }
+    },
+    {
+      "slug": "dairy-eggs",
+      "icon": "https://api.iconify.design/tabler/milk.svg",
+      "name": {
+        "en": "Dairy & Eggs",
+        "fr": "Produits laitiers et œufs",
+        "ar": "ألبان وبيض"
+      }
+    },
+    {
+      "slug": "bakery",
+      "icon": "https://api.iconify.design/tabler/bread.svg",
+      "name": {
+        "en": "Bakery",
+        "fr": "Boulangerie",
+        "ar": "مخبوزات"
+      }
+    },
+    {
+      "slug": "pantry",
+      "icon": "https://api.iconify.design/tabler/soup.svg",
+      "name": {
+        "en": "Pantry",
+        "fr": "Épicerie de base",
+        "ar": "مؤن أساسية"
+      }
+    }
+  ],
+  "items": [
+    {
+      "slug": "apples",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Apples",
+        "fr": "Pommes",
+        "ar": "تفاح"
+      },
+      "image": "https://api.iconify.design/tabler/apple.svg"
+    },
+    {
+      "slug": "bananas",
+      "category": "fruits",
+      "unit": "kg",
+      "name": {
+        "en": "Bananas",
+        "fr": "Bananes",
+        "ar": "موز"
+      },
+      "note": {
+        "en": "Bananas ripen the fruit around them — store them on their own.",
+        "fr": "Les bananes font mûrir les fruits voisins : rangez-les à part.",
+        "ar": "الموز يسرّع نضج الفواكه المجاورة، لذا احفظه بمفرده."
+      },
+      "image": "https://api.iconify.design/tabler/banana.svg"
+    },
+    {
+      "slug": "lemons",
+      "category": "fruits",
+      "unit": "pcs",
+      "name": {
+        "en": "Lemons"
+      },
+      "image": "https://api.iconify.design/tabler/lemon.svg"
+    },
+    {
+      "slug": "tomatoes",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Tomatoes",
+        "fr": "Tomates",
+        "ar": "طماطم"
+      },
+      "note": {
+        "en": "Keep them at room temperature — the fridge dulls their flavour.",
+        "fr": "À conserver à température ambiante : le froid casse leur goût.",
+        "ar": "احفظها في حرارة الغرفة، فالثلاجة تُفقدها نكهتها."
+      }
+    },
+    {
+      "slug": "carrots",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Carrots",
+        "fr": "Carottes",
+        "ar": "جزر"
+      },
+      "image": "https://api.iconify.design/tabler/carrot.svg"
+    },
+    {
+      "slug": "onions",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": {
+        "en": "Onions",
+        "fr": "Oignons",
+        "ar": "بصل"
+      }
+    },
+    {
+      "slug": "milk",
+      "category": "dairy-eggs",
+      "unit": "l",
+      "name": {
+        "en": "Milk",
+        "fr": "Lait",
+        "ar": "حليب"
+      },
+      "note": {
+        "en": "Store it at the back of the fridge, not in the door where it warms up.",
+        "fr": "Rangez-le au fond du réfrigérateur, pas dans la porte où il se réchauffe.",
+        "ar": "ضعه في عمق الثلاجة لا في بابها حيث ترتفع الحرارة."
+      },
+      "image": "https://api.iconify.design/tabler/milk.svg"
+    },
+    {
+      "slug": "eggs",
+      "category": "dairy-eggs",
+      "unit": "pack",
+      "name": {
+        "en": "Eggs",
+        "fr": "Œufs",
+        "ar": "بيض"
+      },
+      "image": "https://api.iconify.design/tabler/egg.svg"
+    },
+    {
+      "slug": "butter",
+      "category": "dairy-eggs",
+      "unit": "pack",
+      "name": {
+        "en": "Butter",
+        "fr": "Beurre",
+        "ar": "زبدة"
+      }
+    },
+    {
+      "slug": "bread",
+      "category": "bakery",
+      "unit": "pcs",
+      "name": {
+        "en": "Bread",
+        "fr": "Pain",
+        "ar": "خبز"
+      },
+      "note": "A bread box or paper bag keeps it better than the fridge.",
+      "image": "https://api.iconify.design/tabler/bread.svg"
+    },
+    {
+      "slug": "baguette",
+      "category": "bakery",
+      "unit": "pcs",
+      "name": {
+        "en": "Baguette",
+        "fr": "Baguette",
+        "ar": "خبز باغيت"
+      },
+      "image": "https://api.iconify.design/tabler/baguette.svg"
+    },
+    {
+      "slug": "bagels",
+      "category": "bakery",
+      "name": "Bagels"
+    },
+    {
+      "slug": "rice",
+      "category": "pantry",
+      "unit": "bag",
+      "name": {
+        "en": "Rice",
+        "fr": "Riz",
+        "ar": "أرز"
+      },
+      "note": {
+        "en": "Rinse it until the water runs clear for separate, fluffy grains.",
+        "fr": "Rincez-le jusqu'à ce que l'eau soit claire pour des grains bien détachés.",
+        "ar": "اغسله حتى يصفو الماء لتحصل على حبات منفصلة هشّة."
+      }
+    },
+    {
+      "slug": "salt",
+      "category": "pantry",
+      "unit": "pack",
+      "name": {
+        "en": "Salt",
+        "fr": "Sel",
+        "ar": "ملح"
+      },
+      "image": "https://api.iconify.design/tabler/salt.svg"
+    },
+    {
+      "slug": "tahini",
+      "category": "pantry",
+      "unit": "bottle",
+      "name": "Tahini",
+      "note": {
+        "en": "Separation is normal — stir the oil back in before using it.",
+        "fr": "La séparation est normale : remuez pour réincorporer l'huile avant usage.",
+        "ar": "انفصال الزيت أمر طبيعي؛ قلّبه جيدًا قبل الاستعمال."
+      }
+    }
+  ]
+}

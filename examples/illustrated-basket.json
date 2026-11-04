@@ -1,0 +1,319 @@
+{
+  "$schema": "../schema/catalog.schema.json",
+  "schema_version": 2,
+
+  "id": "io.github.asd-labs.illustrated-basket",
+  "name": {
+    "en": "Illustrated Basket",
+    "fr": "Panier illustré",
+    "ar": "السلة المرسومة"
+  },
+  "description": {
+    "en": "A standalone starter catalog of twenty-four everyday groceries, drawn rather than photographed — every item points at an OpenMoji illustration (CC BY-SA 4.0, © OpenMoji) instead of a product photo.",
+    "fr": "Un catalogue de départ autonome de vingt-quatre produits du quotidien, dessinés plutôt que photographiés — chaque article pointe vers une illustration OpenMoji (CC BY-SA 4.0, © OpenMoji) au lieu d'une photo de produit.",
+    "ar": "كتالوج بداية مستقل من أربعة وعشرين صنفًا يوميًا، مرسومة لا مصوّرة — كل صنف يشير إلى رسم من OpenMoji (CC BY-SA 4.0، © OpenMoji) بدل صورة منتج."
+  },
+  "homepage": "https://github.com/asd-labs/baggo_catalog",
+  "author": "Abdessamad",
+  "license": "CC0-1.0",
+  "version": 1,
+
+  "default_locale": "en",
+  "expires": 30,
+
+  "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F6CD.svg",
+
+  "shortcuts": {
+    "missing": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F6D2.svg",
+    "favorites": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/2764.svg",
+    "recent": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/23F0.svg"
+  },
+
+  "pins": [
+    { "slug": "groceries", "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F6CD.svg" },
+    { "slug": "home", "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F3E0.svg" },
+    { "slug": "fresh", "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F34E.svg" },
+    { "slug": "party", "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F382.svg" },
+    { "slug": "delivery", "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F4E6.svg" },
+    { "slug": "treats", "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/2728.svg" }
+  ],
+
+  "categories": [
+    {
+      "slug": "fruits",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F34E.svg",
+      "name": { "en": "Fruits", "fr": "Fruits", "ar": "فواكه" }
+    },
+    {
+      "slug": "vegetables",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F955.svg",
+      "name": { "en": "Vegetables", "fr": "Légumes", "ar": "خضار" }
+    },
+    {
+      "slug": "dairy-eggs",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F95B.svg",
+      "name": { "en": "Dairy & Eggs", "fr": "Produits laitiers et œufs", "ar": "ألبان وبيض" }
+    },
+    {
+      "slug": "bakery",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F35E.svg",
+      "name": { "en": "Bakery", "fr": "Boulangerie", "ar": "مخبوزات" }
+    },
+    {
+      "slug": "pantry",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F33E.svg",
+      "name": { "en": "Pantry", "fr": "Épicerie de base", "ar": "مؤن أساسية" }
+    },
+    {
+      "slug": "drinks",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/2615.svg",
+      "name": { "en": "Drinks", "fr": "Boissons", "ar": "مشروبات" }
+    },
+    {
+      "slug": "household",
+      "icon": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9FC.svg",
+      "name": { "en": "Household", "fr": "Entretien", "ar": "مستلزمات المنزل" }
+    }
+  ],
+
+  "items": [
+    {
+      "slug": "apples",
+      "category": "fruits",
+      "unit": "kg",
+      "name": { "en": "Apples", "fr": "Pommes", "ar": "تفاح" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F34E.svg"
+    },
+    {
+      "slug": "bananas",
+      "category": "fruits",
+      "unit": "kg",
+      "name": { "en": "Bananas", "fr": "Bananes", "ar": "موز" },
+      "note": {
+        "en": "Bananas ripen the fruit around them — store them on their own.",
+        "fr": "Les bananes font mûrir les fruits voisins : rangez-les à part.",
+        "ar": "الموز يسرّع نضج الفواكه المجاورة، لذا احفظه بمفرده."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F34C.svg"
+    },
+    {
+      "slug": "lemons",
+      "category": "fruits",
+      "unit": "pcs",
+      "name": { "en": "Lemons", "fr": "Citrons", "ar": "ليمون" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F34B.svg"
+    },
+    {
+      "slug": "oranges",
+      "category": "fruits",
+      "unit": "kg",
+      "name": { "en": "Oranges", "fr": "Oranges", "ar": "برتقال" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F34A.svg"
+    },
+    {
+      "slug": "tomatoes",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": { "en": "Tomatoes", "fr": "Tomates", "ar": "طماطم" },
+      "note": {
+        "en": "Keep them at room temperature — the fridge dulls their flavour.",
+        "fr": "À conserver à température ambiante : le froid casse leur goût.",
+        "ar": "احفظها في حرارة الغرفة، فالثلاجة تُفقدها نكهتها."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F345.svg"
+    },
+    {
+      "slug": "carrots",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": { "en": "Carrots", "fr": "Carottes", "ar": "جزر" },
+      "note": {
+        "en": "Twist the leafy tops off before storing — they draw moisture out of the root.",
+        "fr": "Ôtez les fanes avant de les ranger : elles pompent l'humidité de la racine.",
+        "ar": "انزع الأوراق الخضراء قبل التخزين لأنها تسحب رطوبة الجذر."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F955.svg"
+    },
+    {
+      "slug": "onions",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": { "en": "Onions", "fr": "Oignons", "ar": "بصل" },
+      "note": {
+        "en": "Store them away from potatoes — together they both sprout faster.",
+        "fr": "Rangez-les loin des pommes de terre : côte à côte, tout germe plus vite.",
+        "ar": "احفظه بعيدًا عن البطاطس، فوجودهما معًا يعجّل الإنبات."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9C5.svg"
+    },
+    {
+      "slug": "potatoes",
+      "category": "vegetables",
+      "unit": "kg",
+      "name": { "en": "Potatoes", "fr": "Pommes de terre", "ar": "بطاطس" },
+      "note": {
+        "en": "Somewhere dark — light turns the skin green and bitter.",
+        "fr": "À l'abri de la lumière : elle verdit la peau et la rend amère.",
+        "ar": "احفظها في مكان مظلم، فالضوء يخضّر القشرة ويجعلها مرّة."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F954.svg"
+    },
+    {
+      "slug": "milk",
+      "category": "dairy-eggs",
+      "unit": "l",
+      "name": { "en": "Milk", "fr": "Lait", "ar": "حليب" },
+      "note": {
+        "en": "Store it at the back of the fridge, not in the door where it warms up.",
+        "fr": "Rangez-le au fond du réfrigérateur, pas dans la porte où il se réchauffe.",
+        "ar": "ضعه في عمق الثلاجة لا في بابها حيث ترتفع الحرارة."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F95B.svg"
+    },
+    {
+      "slug": "eggs",
+      "category": "dairy-eggs",
+      "unit": "pack",
+      "name": { "en": "Eggs", "fr": "Œufs", "ar": "بيض" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F95A.svg"
+    },
+    {
+      "slug": "cheese",
+      "category": "dairy-eggs",
+      "unit": "g",
+      "name": { "en": "Cheese", "fr": "Fromage", "ar": "جبن" },
+      "note": {
+        "en": "Wrap it in paper rather than plastic so it can breathe.",
+        "fr": "Emballez-le dans du papier plutôt que du plastique, pour qu'il respire.",
+        "ar": "لفّه بورق لا بالبلاستيك حتى يتنفس."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9C0.svg"
+    },
+    {
+      "slug": "butter",
+      "category": "dairy-eggs",
+      "unit": "pack",
+      "name": { "en": "Butter", "fr": "Beurre", "ar": "زبدة" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9C8.svg"
+    },
+    {
+      "slug": "bread",
+      "category": "bakery",
+      "unit": "pcs",
+      "name": { "en": "Bread", "fr": "Pain", "ar": "خبز" },
+      "note": {
+        "en": "A bread box or paper bag keeps it better than the fridge.",
+        "fr": "Une huche ou un sac en papier le garde mieux que le réfrigérateur.",
+        "ar": "علبة الخبز أو كيس الورق أفضل له من الثلاجة."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F35E.svg"
+    },
+    {
+      "slug": "baguette",
+      "category": "bakery",
+      "unit": "pcs",
+      "name": { "en": "Baguette", "fr": "Baguette", "ar": "خبز باغيت" },
+      "note": {
+        "en": "Buy it the day you eat it — it is stale by the next morning.",
+        "fr": "À acheter le jour même : dès le lendemain matin, elle est rassise.",
+        "ar": "اشترِه يوم أكله، فهو يجفّ بحلول صباح الغد."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F956.svg"
+    },
+    {
+      "slug": "croissants",
+      "category": "bakery",
+      "unit": "pcs",
+      "name": { "en": "Croissants", "fr": "Croissants", "ar": "كرواسون" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F950.svg"
+    },
+    {
+      "slug": "rice",
+      "category": "pantry",
+      "unit": "bag",
+      "name": { "en": "Rice", "fr": "Riz", "ar": "أرز" },
+      "note": {
+        "en": "Rinse it until the water runs clear for separate, fluffy grains.",
+        "fr": "Rincez-le jusqu'à ce que l'eau soit claire pour des grains bien détachés.",
+        "ar": "اغسله حتى يصفو الماء لتحصل على حبات منفصلة هشّة."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F35A.svg"
+    },
+    {
+      "slug": "pasta",
+      "category": "pantry",
+      "unit": "pack",
+      "name": { "en": "Pasta", "fr": "Pâtes", "ar": "معكرونة" },
+      "note": {
+        "en": "Salt the water like the sea — it is the only chance to season the pasta itself.",
+        "fr": "Salez l'eau comme la mer : c'est la seule occasion d'assaisonner les pâtes.",
+        "ar": "ملّح الماء بسخاء، فهي الفرصة الوحيدة لتتبيل المعكرونة نفسها."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F35D.svg"
+    },
+    {
+      "slug": "salt",
+      "category": "pantry",
+      "unit": "pack",
+      "name": { "en": "Salt", "fr": "Sel", "ar": "ملح" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9C2.svg"
+    },
+    {
+      "slug": "honey",
+      "category": "pantry",
+      "unit": "bottle",
+      "name": { "en": "Honey", "fr": "Miel", "ar": "عسل" },
+      "note": {
+        "en": "Crystallised honey is not spoiled — warm the jar gently and it clears.",
+        "fr": "Un miel cristallisé n'est pas gâté : réchauffez doucement le pot, il redevient clair.",
+        "ar": "تبلور العسل ليس فسادًا؛ سخّن الوعاء برفق ليعود صافيًا."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F36F.svg"
+    },
+    {
+      "slug": "coffee",
+      "category": "drinks",
+      "unit": "pack",
+      "name": { "en": "Coffee", "fr": "Café", "ar": "قهوة" },
+      "note": {
+        "en": "Keep the beans in an airtight jar in the cupboard, not the freezer.",
+        "fr": "Gardez les grains dans un bocal hermétique au placard, pas au congélateur.",
+        "ar": "احفظ الحبوب في وعاء محكم داخل الخزانة لا في الفريزر."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/2615.svg"
+    },
+    {
+      "slug": "tea",
+      "category": "drinks",
+      "unit": "box",
+      "name": { "en": "Tea", "fr": "Thé", "ar": "شاي" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F375.svg"
+    },
+    {
+      "slug": "soap",
+      "category": "household",
+      "unit": "pcs",
+      "name": { "en": "Soap", "fr": "Savon", "ar": "صابون" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9FC.svg"
+    },
+    {
+      "slug": "toilet-paper",
+      "category": "household",
+      "unit": "pack",
+      "name": { "en": "Toilet paper", "fr": "Papier toilette", "ar": "ورق مرحاض" },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9FB.svg"
+    },
+    {
+      "slug": "dish-sponge",
+      "category": "household",
+      "unit": "pack",
+      "name": { "en": "Dish sponge", "fr": "Éponge à vaisselle", "ar": "إسفنجة جلي" },
+      "note": {
+        "en": "Replace it every couple of weeks — a damp sponge is the sink's dirtiest thing.",
+        "fr": "Changez-la toutes les deux semaines : humide, c'est l'objet le plus sale de l'évier.",
+        "ar": "غيّرها كل أسبوعين، فالإسفنجة الرطبة أكثر ما يحمل الجراثيم في المجلى."
+      },
+      "image": "https://cdn.jsdelivr.net/gh/hfg-gmuend/openmoji@15.0.0/color/svg/1F9FD.svg"
+    }
+  ]
+}

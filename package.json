@@ -1,0 +1,14 @@
+{
+  "name": "baggo_catalog",
+  "private": true,
+  "description": "Schema, template and examples for Baggo catalogs, with a validator.",
+  "type": "module",
+  "license": "CC0-1.0",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "validate": "node scripts/validate.mjs"
+  },
+  "devDependencies": {
+    "ajv": "^8.17.1"
+  }
+}
